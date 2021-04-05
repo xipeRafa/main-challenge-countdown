@@ -6,7 +6,6 @@
       function countdown() {
         let seconds;
         
-        // Seconds's render
         if (count > 0) {
           count -= 1
           seconds = count < 10 ? `0${count}` : `${count}`;
@@ -25,19 +24,14 @@
         }
       }
     
-      let run = setInterval(() => {
-        if (count >= 0) {
-          countdown();
-        } else {
-          clearInterval(run);
-          console.log('seconds-stop');
-        }
-      }, 1000);
+       setInterval(() => {
+           countdown();
+        }, 1000);
     })();
    
     
 
-    (function minutes() {
+  (function minutes() {
 
       let count = 59
       let minute = document.getElementById('minute')
@@ -46,7 +40,6 @@
      
      let minutes;
  
-    // minutes's render
     if (count > 0) {
       count -= 1
       minutes = count < 10 ? `0${count}` : `${count}`;
@@ -65,13 +58,7 @@
     }
   }
 
-  let run = setInterval(() => {
-     
-    if (count >= 0) {
-      countdown();
-    } else {
-      clearInterval(run);
-      console.log('minutes-stop');
-    }
-  }, 60000);
+   setInterval(() => {
+         countdown();
+       }, 60000);
 })();
