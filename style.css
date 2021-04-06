@@ -1,3 +1,13 @@
+:root {
+  --Grayish-blue:  hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --Dark-desaturated-blue: hsl(236, 21%, 26%);
+  --Very-dark-blue: hsl(235, 16%, 14%);
+  --Very-dark: hsl(234, 17%, 12%);
+  --White: hsl(0, 0%, 100%); 
+
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,8 +18,8 @@
 body {
   font-family: "Red Hat Text", sans-serif;
   font-size: 14px;
-  color: white;
-  background: url("images/bg-stars.svg"), #1e1f29;
+  color: var(--White);
+  background: url("images/bg-stars.svg"), var(--Very-dark-blue);
   background-size: 1000px;
 }
 
@@ -54,7 +64,6 @@ section {
   font-size: 2.1rem;
   font-weight: 700;
   line-height: 0;
-  perspective: 225px;
 
 }
 
@@ -67,7 +76,7 @@ section {
   position: absolute;
   top: calc(50% - 3px);
   z-index: 2;
-  background-color: #1e1f29;
+  background-color: var(--Very-dark-blue);
 }
 .card-container::before {
   left: -3px;
@@ -91,8 +100,8 @@ section {
   justify-content: center;
   z-index: 0;
   overflow: hidden;
-  color: #fb6087;
-  background-color: #343650;
+  color: var(--soft-red);
+  background-color: var(--Dark-desaturated-blue);
   
 }
 .base::before {
@@ -100,11 +109,11 @@ section {
   border-radius: 0 0 5px 5px;
   bottom: 0;
   align-items: flex-start;
-  box-shadow: 0px 5px 0px 0px #191a24;
+  box-shadow: 0px 5px 0px 0px var(--Very-dark);
 }
 .base::after {
   content: attr(data-base-after);
-  border-bottom: 1px solid #1e1f29;
+  border-bottom: 1px solid var(--Very-dark-blue);
   border-radius: 5px 5px 0 0;
   top: 0;
   align-items: flex-end;
@@ -131,17 +140,20 @@ section {
   overflow: hidden;
   backface-visibility: hidden;
 }
+
 .card-face-front, .card-face-back {
-  color: #fb6087;
-  background-color: #343650;
+  color: var( --soft-red);
+  background-color: var(--Dark-desaturated-blue);
 }
+
 .card-face-front {
   border-radius: 5px 5px 0 0;
   align-items: flex-end;
   filter: brightness(85%);
 }
+
 .card-face-back {
-  border-top: 1px solid #1e1f29;
+  border-top: 1px solid var(--Very-dark-blue);
   border-radius: 0 0 5px 5px;
   align-items: flex-start;
   transform: rotateX(-180deg);
@@ -169,10 +181,10 @@ section {
 .sn-logo {
   margin: 0 16px;
   font-size: 1.65rem;
-  color: #8486a9;
+  color: var(--Grayish-blue);
 }
 .sn-logo:hover {
-  color: #fb6087;
+  color: var( --soft-red);
 }
 
 .flip {
